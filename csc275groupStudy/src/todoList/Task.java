@@ -38,6 +38,7 @@ public class Task {
 		this.description = description;
 	}
 	
+	//todo: change the name of the method to toggleCompleted, don't pass any arguments and control the flow of toggling completion here.
 	public void setIsCompleted(boolean completed) {
 		this.completed = completed;
 	}
