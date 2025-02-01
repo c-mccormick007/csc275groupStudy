@@ -10,6 +10,22 @@ public class PriorityTask extends Task {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null || this.getClass() != obj.getClass()) {
+			return false;
+		}
+		
+		PriorityTask other = (PriorityTask) obj;
+		return this.getTitle().equals(other.getTitle()) && 
+				this.getDescription().equals(getDescription()) && 
+				this.priority == other.priority && 
+				this.isCompleted() == other.isCompleted();
+	}
+	
+	@Override
 	public String toString() {
 		return "[PriorityTask] [title=\"" + this.getTitle() + 
 				", description=\"" + this.getDescription() + 
